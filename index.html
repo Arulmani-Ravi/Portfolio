@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arulmani R | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --bg-light: #f9f9f9;
+      --bg-dark: #1e1e1e;
+      --text-light: #333;
+      --text-dark: #f1f1f1;
+      --card-light: #ffffffcc;
+      --card-dark: #2a2a2a;
+      --primary: #2980b9;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+       header h1:hover {
+     color: #1abc9c;
+      text-shadow: 2px 2px 8px rgba(26, 188, 156, 0.4);
+     transform: scale(1.05);
+      transition: all 0.3s ease;
+     cursor: pointer;
+    }
+
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #8e9eab, #eef2f3);
+      color: var(--text-light);
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    body.dark-mode {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+     a:hover {
+     color: #1abc9c;
+     text-decoration: underline;
+     }
+
+   
+     section:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+     transition: all 0.3s ease;
+     }
+
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: inherit;
+      margin-bottom: 10px;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #1c5980;
+    }
+
+    section {
+      margin: 30px 0;
+      padding: 20px;
+      background: var(--card-light);
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+
+    body.dark-mode section {
+      background: var(--card-dark);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #ccc;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: var(--primary);
+      color: white;
+      padding: 10px 14px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      z-index: 1000;
+      transition: 0.3s;
+    }
+    .toggle-btn:hover {
+    background-color: #1abc9c;
+    transform: scale(1.05);
+    }
+
+
+    .toggle-btn:hover {
+      background-color: #1c5980;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+
+      .toggle-btn {
+        right: 10px;
+        top: 10px;
+        padding: 8px 12px;
+      }
+
+      section {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+  <header>
+    <h1>ARULMANI R</h1>
+    <nav>
+      <a href="#about"><i class="fas fa-user"></i> About</a>
+      <a href="#skills"><i class="fas fa-code"></i> Skills</a>
+      <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+      <a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a>
+      <a href="#languages"><i class="fas fa-language"></i> Languages</a>
+      <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>  I'm an enthusiastic and hardworking B.Tech IT student at P.B. College of Engineering, Chennai (2022–2026), passionate
+      about software development and AWS Cloud. I’m eager to learn, build, and grow through hands-on projects and
+      real-world cloud applications.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li><strong>Programming:</strong> Python, C, Java (Basic)</li>
+      <li><strong>Cloud:</strong> AWS (EC2, S3, IAM, RDS)</li>
+      <li><strong>Web:</strong> HTML, CSS</li>
+      <li><strong>Tools:</strong> Git, VS Code</li>
+      <li><strong>OS:</strong> Linux, Windows</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <h3><i class="fas fa-pills"></i> MediTrack Cloud – Medicine Expiry Tracker </h3>
+    <ul>
+      <li>Uses AWS Cognito, S3, Textract, and Lambda</li>
+      <li>Extracts expiry date from medicine image</li>
+      <li>Sends alerts before expiry</li>
+    </ul>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>NPTEL – Python for Data Science</li>
+      <li>Cisco – Introduction to Networking</li>
+      <li>Cisco – Introduction to Cybersecurity</li>
+    </ul>
+  </section>
+
+  <section id="languages">
+    <h2>Languages Known</h2>
+    <ul>
+      <li>Tamil</li>
+      <li>English</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:arula8244@gmail.com">arula8244@gmail.com</a></p>
+    <p><i class="fas fa-phone"></i> <a href="tel:+918098234297">8098234297</a></p>
+    <p><i class="fab fa-github"></i> <a href="https://github.com/Arulmani-Ravi" target="_blank">github.com/Arulmani-Ravi</a></p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/arulmani-ravi" target="_blank">linkedin.com/in/arulmani-ravi</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 ARULMANI-RAVI | All Rights Reserved 💙</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+</body>
+
+</html>
